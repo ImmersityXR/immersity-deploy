@@ -689,6 +689,44 @@ ls -la ~/immersity-deploy/immersity-relay/captures/
 
 ---
 
+## Stress Testing
+
+A unified stress testing tool is available to test system performance under load and monitor VM resources.
+
+### Quick Start
+
+```bash
+cd ~/immersity-deploy/stress-test
+
+# Choose a mode:
+./run-test.sh automated --users 5    # Automated stress test
+./run-test.sh monitor --duration 300 # System monitoring only
+./run-test.sh manual --users 5       # Manual user testing
+./run-test.sh complete               # Full test suite
+```
+
+### Single Script, Four Modes
+
+- **automated**: Simulates multiple concurrent users (curl-based)
+- **monitor**: Monitors CPU, memory, GPU, disk I/O, network
+- **manual**: Provides URLs for real users + system monitoring
+- **complete**: Runs automated + manual + monitoring
+
+### Features
+
+- WebGL application load testing with concurrent users
+- Real-time system resource monitoring
+- Docker container resource tracking
+- Manual user testing with real 3D navigation
+- Comprehensive reports with performance metrics
+
+### Documentation
+
+For detailed instructions, testing scenarios, and troubleshooting:
+- See **[stress-test/README.md](stress-test/README.md)** for complete documentation
+
+---
+
 ## Additional Resources
 
 - **Traefik Documentation**: https://doc.traefik.io/traefik/

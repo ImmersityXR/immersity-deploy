@@ -278,13 +278,7 @@ Users:   Get URLs → Wait for GO → Navigate together → Stop together
 
 ## Quick Start
 
-### Step 1: Make Script Executable (Ubuntu VM)
-```bash
-cd ~/immersity-deploy/stress-test
-chmod +x run-test.sh
-```
-
-### Step 2: Choose Your Test Mode
+### Step 1: Choose Your Test Mode
 
 #### Option A: Quick Automated Test
 ```bash
@@ -306,7 +300,7 @@ chmod +x run-test.sh
 ./run-test.sh complete
 ```
 
-### Step 3: View Results
+### Step 2: View Results
 ```bash
 ls -la stress-test-logs/
 cat stress-test-logs/*_report_*.txt
