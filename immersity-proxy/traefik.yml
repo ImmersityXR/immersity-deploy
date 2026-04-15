@@ -5,7 +5,7 @@
 # API and Dashboard
 api:
   dashboard: true
-  insecure: true  # Access dashboard on :8080 (Mapping is handled in docker-compose)
+  insecure: true #Enable dashboard on port 8080 (disable in production)
 
 # Entry Points
 entryPoints:
@@ -13,8 +13,6 @@ entryPoints:
     address: ":80"
   websecure:
     address: ":443"
-    # New in v3: You can define default HTTP settings here, 
-    # but your current label-based setup is also perfectly fine.
     http:
       tls:
         certResolver: letsencrypt
@@ -38,9 +36,8 @@ certificatesResolvers:
 
 # Logging
 log:
-  level: INFO  # Use DEBUG for troubleshooting during the migration
+  level: INFO  # DEBUG, INFO, WARN, ERROR
 
 accessLog:
-  # In v3, stdout is the default, but keeping this is fine for clarity
   filePath: "/dev/stdout"
   format: common
